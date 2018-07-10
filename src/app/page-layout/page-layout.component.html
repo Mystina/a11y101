@@ -1,0 +1,30 @@
+<a11y-billboard></a11y-billboard>
+<div class="container">
+  <div class="columnwrapper">
+    <div class="left-nav">
+      <ul>
+        <li *ngFor="let pageRoute of pageRoutes">
+          <a [routerLink]="[pageRoute.path]" class="nav__links--parent" (click)="showNavigationChildren(pageRoute)">{{pageRoute.name}}  
+          </a>
+          <i *ngIf="pageRoute.hasChildren" class="icon-quiz icon-down">
+            <span class="visually-hidden">Icon Down</span>
+          </i>
+
+          <ul *ngIf="pageRoute.isDropdownVisible" class="nav__links--children">
+            <li *ngFor="let links of pageRoute.children" [routerLinkActive]="['is-active']">
+              <a *ngIf="!links.isDisabled" [routerLink]="[links.path]" class="nav__links--child">
+                {{links.name}}
+              </a>
+              <a *ngIf="links.isDisabled" class="nav-link--disabled">{{links.name}}</a>
+            </li>
+          </ul>
+
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<a11y-mission-statement></a11y-mission-statement>

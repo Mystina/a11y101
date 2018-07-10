@@ -1,0 +1,52 @@
+@import '../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+@import './app/css/prism.css';
+
+.container{
+    padding: 30px;  
+}
+.columnwrapper {
+    display: flex;
+    color: #240f6e;
+}
+.main-content {
+    flex: 5 0 0;
+	height: 50%;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 0px 0 rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    float: right;  
+    
+} 
+
+
+.bullets {
+    margin-left: 20px;
+}
+
+.higgs-page__header{
+    padding: 12px 0;
+}
+
+h1.higgs-page__header{
+    text-transform: uppercase;
+}
+
+h2.higgs-page__header,
+.higgs-page__subheader{
+    color: #8E83B8;
+    text-transform: uppercase;
+}
+
+.container section{
+    margin-bottom: 36px;
+}
+
+.container section > ul{
+    padding: 12px 24px;
+}
+
+
+
+

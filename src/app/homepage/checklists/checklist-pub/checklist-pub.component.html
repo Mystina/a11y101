@@ -1,0 +1,321 @@
+<sticky-nav></sticky-nav>
+<h1 tabindex="0">Publishing</h1>
+<div class="checklist-area" id="dd" tabindex="0">
+  <ul>
+    <h3>Hard Copy Prints Assets</h3>
+    <li>
+      <input type="checkbox" name="pub-1" id="pub-1" tabindex="0" />
+      <label for="pub-1">Has good alt text for all images that convey meaningful information
+      </label>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-2" id="pub-2" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-2">Large font version (ie. Arial 22 pt)</label>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-3" id="pub-3" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-3">Digital version with semantic markup (headings and structure)
+      </label>
+    </li>
+    <h3>ePub</h3>
+    <li>
+      <input type="checkbox" name="pub-4" id="pub-4" tabindex="0" />
+      <label for="pub-4">Has logic reading order
+      </label>
+      <ul>
+        <li class="bullet">Use heading levels correctly with always
+          <code>h1</code> as the first heading level in each page, section, and region</li>
+        <li class="bullet">When use table markups, ensure screen readers can navigate elements within the table, such as column header information
+          and all cells. Having "live" tables allows for font size increase and ability to tab from cell to cell on some readers
+          <ul>
+            <li class="bullet--sub">Include use of
+              <code>thead</code> to group multi-row headings</li>
+            <li class="bullet--sub">
+              <code>th</code> required to indicate headings and subheadings</li>
+          </ul>
+        </li>
+        <li>When use list markups(
+          <code>ol</code>,
+          <code>ul</code>), ensure screen readers identify hierarchy of the list and its sublists. Also enable dynamic list numbering</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-5" id="pub-5" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-5">Emphasis and Bolding
+      </label>
+      <ul>
+        <li class="bullet">
+          <code>em</code> tags used to indicate all text that is to be vocally stressed</li>
+        <li class="bullet">
+          <code>strong</code> tags used to indicate where importance is being conveyed</li>
+        <li class="bullet">
+          <code>i</code> and
+          <code>b</code> tags used for non-emphasized text that is semantically significant and indicates a change in tone</li>
+        <li class="bullet">CSS styling (span class=”bold”) for presentational bolding and italics need to be recognized by screen readers</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-6" id="pub-6" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-6">Language
+      </label>
+      <ul>
+        <li class="bullet">HTML documents should have a language assigned</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-7" id="pub-7" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-7">Links</label>
+      <ul>
+        <li class="bullet">All linked content is also accessible to the reader</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-8" id="pub-8" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-8">Figures, Tables, Graphs</label>
+      <ul>
+        <li class="bullet">Captions and titles where available, marked up appropriately using HTML5 (figure/figcaption</li>
+        <li class="bullet">Alt text provided for all significant images, where proper description is lacking for a non-sighted reader
+          <ul>
+            <li class="bullet--sub">Do not repeat the figure caption or any content directly from the surrounding body paragraphs</li>
+            <li class="bullet--sub">The vendor will not make changes to the figure or table captions. Suggestions on changes to figure captions can
+              be made by Kaplan at the time of review</li>
+            <li class="bullet--sub">The vendor will tailor alt text descriptions to be at the level and vocabulary of the intended audience, i.e.
+              SAT high school student versus Medical student</li>
+            <li class="bullet--sub">Keep to as close to 140 characters</li>
+            <li class="bullet--sub">The screen reader software announces "graphic" then the alt text. Do not add "An image of" to the alt text</li>
+          </ul>
+        </li>
+        <li class="bullet">Alt attribute left empty for decorative images, including background images which should not convey information</li>
+        <li class="bullet">Use tables for conveying tabular information not for presentation</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-9" id="pub-9" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-9">Math</label>
+      <ul>
+        <li class="bullet">MathML markup included for all math content
+          <ul>
+            <li class="bullet--sub">All math expressions and/or equations must be entered as MathML (in an equation editor such as the one included
+              with MS Word, Habitat or in Google docs)</li>
+            <li class="bullet--sub">Fractions and exponents are represented using MathML</li>
+            <li class="bullet--sub">Plain numbers or isolated variables okay as text (e.g. 7 or x)</li>
+            <li class="bullet--sub">Single variables are okay as inline text= Ex. x + 5 =</li>
+            <li class="bullet--sub">Simple equations are okay as inline text if no unicode: Ex. 1+2
+            </li>
+            <li class="bullet--sub">Alt attribute left empty for decorative images, including background images which should not convey information.
+              If unicode symbols is present the entire equation should be represented instead as MathML, Ex. x ≠−5
+            </li>
+            <li class="bullet--sub">Span class=”equation” not read by screen reader and not useful for this purpose</li>
+          </ul>
+        </li>
+        <li class="bullet">Mathjax rendering code has been added/enabled</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-10" id="pub-10" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-10">Validated as accessible through the Internantional Digital Publishing Forum (IDPF) EPUB 3 Markup Quality Assurance
+        checklist (required and recommended levels)</label>
+      <p>
+        <a href="http://www.idpf.org/accessibility/guidelines/content/qa/qa-checklist.php">Internantional Digital Publishing Forum (IDPF) EPUB 3 Markup Quality Assurance checklist</a>
+      </p>
+    </li>
+    <h3>PDF</h3>
+    <li>
+      <input type="checkbox" name="pub-11" id="pub-11" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-11">Has good alt text for all images that convey meaningful information</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-12" id="pub-12" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-12">Has good alt text for all math images</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-13" id="pub-13" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-13">Follows the general instructions in Accessible Content Formatting Guidelines</label>
+      <p>
+        <a href="https://drive.google.com/a/kaplan.com/file/d/0BxOCfd34Xf2JckI2Vm4wQmVackE/edit">Accessible Content Formatting</a>
+      </p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-14" id="pub-14" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-14">Validated as accessible using accessibility checks in Adobe Acrobat, PAC PDF Accessibility Checker 2.0 (Windows only)
+        or other</label>
+      <p>
+        <a href="http://www.access-for-all.ch/en/pdf-lab/pdf-accessibility-checker-pac.html">PAC PDF Accessibility Checker 2.0 (Windows only)</a>
+      </p>
+    </li>
+    <h3>PowerPoint Documents</h3>
+    <li>
+      <input type="checkbox" name="pub-15" id="pub-15" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-15">Has good alt text for all images that convey meaningful information</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-16" id="pub-16" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-16">Has MathML</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-17" id="pub-17" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-17">Follows the general instructions in Accessible Content Formatting Guidelines</label>
+      <p>
+        <a href="https://drive.google.com/a/kaplan.com/file/d/0BxOCfd34Xf2JckI2Vm4wQmVackE/edit">Accessible Content Formatting</a>
+      </p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-18" id="pub-18" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-18">Validated as accessible using accessibility checks in Microsoft PowerPoint</label>
+      <p>
+        <a href="https://support.office.com/en-us/article/make-your-powerpoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25#PickTab=Windows">Learn how to make your PowerPoint presentations accessible.</a>
+      </p>
+    </li>
+    <h3>Word Documents</h3>
+    <li>
+      <input type="checkbox" name="pub-19" id="pub-19" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-19">Has good alt text for all images that convey meaningful information</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-20" id="pub-20" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-20">Has MathML</label>
+      <p></p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-21" id="pub-21" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-21">Follows the general instructions in Accessible Content Formatting Guidelines</label>
+      <p>
+        <a href="https://drive.google.com/a/kaplan.com/file/d/0BxOCfd34Xf2JckI2Vm4wQmVackE/edit">Accessible Content Formatting</a>
+      </p>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-22" id="pub-22" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-22">Checked as accessible through the Word extension “CAR” check or the Accessibility Check in Microsoft Word</label>
+      <p>
+        <a href="http://www.cwu.edu/central-access/carcheck">"CAR" check</a>
+      </p>
+    </li>
+    <h3>HTML Documents</h3>
+    <li>
+      <input type="checkbox" name="pub-23" id="pub-23" tabindex="0" />
+      <label for="pub-23">Has logic reading order
+      </label>
+      <ul>
+        <li class="bullet">Use heading levels correctly with always
+          <code>h1</code> as the first heading level in each page, section, and region</li>
+        <li class="bullet">When use table markups, ensure screen readers can navigate elements within the table, such as column header information
+          and all cells. Having "live" tables allows for font size increase and ability to tab from cell to cell on some readers
+          <ul>
+            <li class="bullet--sub">Include use of
+              <code>thead</code> to group multi-row headings</li>
+            <li class="bullet--sub">
+              <code>th</code> required to indicate headings and subheadings</li>
+          </ul>
+        </li>
+        <li>When use list markups(
+          <code>ol</code>,
+          <code>ul</code>), ensure screen readers identify hierarchy of the list and its sublists. Also enable dynamic list numbering</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-24" id="pub-24" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-24">Emphasis and Bolding
+      </label>
+      <ul>
+        <li class="bullet">
+          <code>em</code> tags used to indicate all text that is to be vocally stressed</li>
+        <li class="bullet">
+          <code>strong</code> tags used to indicate where importance is being conveyed</li>
+        <li class="bullet">
+          <code>i</code> and
+          <code>b</code> tags used for non-emphasized text that is semantically significant and indicates a change in tone</li>
+        <li class="bullet">CSS styling (span class=”bold”) for presentational bolding and italics need to be recognized by screen readers</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-25" id="pub-25" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-25">Language
+      </label>
+      <ul>
+        <li class="bullet">HTML documents should have a language assigned</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-26" id="pub-26" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-26">Links</label>
+      <ul>
+        <li class="bullet">All linked content is also accessible to the reader</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-27" id="pub-27" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-27">Figures, Tables, Graphs</label>
+      <ul>
+        <li class="bullet">Captions and titles where available, marked up appropriately using HTML5 (figure/figcaption</li>
+        <li class="bullet">Alt text provided for all significant images, where proper description is lacking for a non-sighted reader
+          <ul>
+            <li class="bullet--sub">Do not repeat the figure caption or any content directly from the surrounding body paragraphs</li>
+            <li class="bullet--sub">The vendor will not make changes to the figure or table captions. Suggestions on changes to figure captions can
+              be made by Kaplan at the time of review</li>
+            <li class="bullet--sub">The vendor will tailor alt text descriptions to be at the level and vocabulary of the intended audience, i.e.
+              SAT high school student versus Medical student</li>
+            <li class="bullet--sub">Keep to as close to 140 characters</li>
+            <li class="bullet--sub">The screen reader software announces "graphic" then the alt text. Do not add "An image of" to the alt text</li>
+          </ul>
+        </li>
+        <li class="bullet">Alt attribute left empty for decorative images, including background images which should not convey information</li>
+        <li class="bullet">Use tables for conveying tabular information not for presentation</li>
+      </ul>
+    </li>
+
+    <li>
+      <input type="checkbox" name="pub-28" id="pub-28" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-28">Math</label>
+      <ul>
+        <li class="bullet">MathML markup included for all math content
+          <ul>
+            <li class="bullet--sub">All math expressions and/or equations must be entered as MathML (in an equation editor such as the one included
+              with MS Word, Habitat or in Google docs)</li>
+            <li class="bullet--sub">Fractions and exponents are represented using MathML</li>
+            <li class="bullet--sub">Plain numbers or isolated variables okay as text (e.g. 7 or x)</li>
+            <li class="bullet--sub">Single variables are okay as inline text= Ex. x + 5 =</li>
+            <li class="bullet--sub">Simple equations are okay as inline text if no unicode: Ex. 1+2
+            </li>
+            <li class="bullet--sub">Alt attribute left empty for decorative images, including background images which should not convey information.
+              If unicode symbols is present the entire equation should be represented instead as MathML, Ex. x ≠−5
+            </li>
+            <li class="bullet--sub">Span class=”equation” not read by screen reader and not useful for this purpose</li>
+          </ul>
+        </li>
+        <li class="bullet">Mathjax rendering code has been added/enabled</li>
+      </ul>
+    </li>
+    <li>
+      <input type="checkbox" name="pub-29" id="pub-29" tabindex="0" ng-model="item.selected" ng-checked="item.selected" />
+      <label for="pub-29">Validated as accessible through the Web Content Accessibility Guidelines (WCAG) 2.0 Checklist</label>
+      <p>
+        <a href="https://www.w3.org/TR/2006/WD-WCAG20-20060427/appendixB.html">Web Content Accessibility Guidelines (WCAG) 2.0 Checklist</a>
+      </p>
+    </li>
+
+  </ul>
+  <!-- <div>Items {{ selectedItemsCount() }} Checked!</div> -->
+</div>
+<div>
+  <h2>References</h2>
+  <a class="application_link--bold color--secondary" href="https://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines (WCAG) 2.0</a>
+  <br>
+  <a class="application_link--bold color--secondary" href="https://www.section508.gov/">GSA Section508.org</a>
+  <br>
+  <a class="application_link--bold color--secondary" href="http://accessibility.voxmedia.com/">Voxmedia Accessibility Guidelines</a>
+  <br>
+  <a class="application_link--bold color--secondary" href="http://www-03.ibm.com/able/guidelines/ci162/accessibility_checklist.html">IBM Accessibility Checklist</a>
+</div>
+<!-- <img *ngIf="state0" src="../../assets/flower0.svg" width="100px" tabindex="0" alt="flower with seeds" class="flower-seeds">
+<img *ngIf="state1" src="../../assets/flower1.svg" width="100px" tabindex="0" alt="flower with seeds" class="flower-seeds">
+<img *ngIf="state2" src="../../assets/flower2.png" width="100px" tabindex="0" alt="flower with seeds" class="flower-seeds"> -->

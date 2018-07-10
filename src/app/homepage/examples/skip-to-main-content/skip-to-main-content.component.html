@@ -1,0 +1,35 @@
+<h2>Add Skip to Main Content Link</h2>
+<p>A Skip to Main Content link needs to be added to the top of each page that has a long list of navigation links, 
+    sub-lists of links, corporate icons, site searches, and other elements before the main content. 
+    The idea of Skip to Main Content link is to provide a way to keyboard and screen reader users to 
+    jump down to an anchor or target at the beginning of the main content. Here's an example you can 
+    implement to your Angular Applications:
+</p>
+<p>First, add the link effect style in your css files for the Skip to Main Content link:</p>
+<pre class="language-css">skip-navigation a {{'{'}} 
+    position: absolute; 
+    left: -10000px; 
+    top: auto; 
+    width: 1px; 
+    height: 1px; 
+    overflow: hidden; 
+} 
+.skip-navigation a:focus {{'{'}} 
+    position: static; 
+    width: auto; 
+    height: auto; 
+}</pre>
+<p>Then in the HTML file in which you want to show the Skip to Main Content link, add:</p>
+<pre class="language-markup">
+&lt;div class="skip-navigation"&gt;
+    &lt;a href="" onclick="window.location.hash='content'; event.preventDefault();"&gt;
+    Skip to Main Content&lt;/a&gt;
+&lt;/div&gt;</pre>
+<p>Then at the beginning the main content section or HTML file, add
+    <code>id="content"</code>, e.g.:</p>
+<pre class="language-markup">&lt;section class="kape-container" id="content"&gt;
+    &lt;/section&gt;</pre>
+<p>or</p>
+<pre class="language-markup">&lt;div class="sticky" *ngIf="tagListReady$ | async" id="content"&gt;
+    &lt;/div&gt;
+</pre>

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import '../../../../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+//@import '~prismjs/themes/prism';
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #222121;
+  font-family: 'Open Sans', sans-serif; 
+}
+.skip-navigation a {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden; 
+}
+
+.skip-navigation a:focus {
+    position: static;
+    width: auto;
+    height: auto; 
+}

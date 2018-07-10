@@ -1,0 +1,52 @@
+@import '../../../../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+
+header {
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.billboard {
+    background-color: $grey-color--four;
+    width: 100%;
+}
+
+.billboard__splash-text {
+    max-width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3.6rem 0rem;
+
+    img {
+        padding: 1.2rem;
+    }
+
+    .billboard__splash-text--headings {
+        order: 1;
+	    flex: 5;
+
+        h1 {
+            font-size: 3.6rem;
+            color: $primary-color;
+            font-weight: 800;
+        }
+
+        blockquote {
+            padding: 2.4rem 0rem;
+            font-size: 2.4rem; 
+            font-weight: bold;  
+            font-style: italic;     
+        }
+        .web-info {
+            font-weight: bold;
+        }
+    }
+}
+
+.quote-source {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 600px;
+    font-style: italic;
+}

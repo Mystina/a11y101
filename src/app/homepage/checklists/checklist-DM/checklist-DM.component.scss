@@ -1,0 +1,95 @@
+@import '../../../../../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+
+
+h1 {
+    font-size: 3.6rem;
+    color: $primary-color;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: $primary-color;
+    padding-top: 2.8rem;
+}
+
+.flower-seeds {
+    position: fixed;
+    right: 2%;
+    top: 80%;
+    z-index: 4;
+}
+
+.checklist-area {
+
+    input[type="checkbox"] {
+        opacity: 0;
+        margin-bottom: 2.4rem;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        margin-left: 5%;
+    }
+
+
+    label {
+        position: relative;
+        padding-top: 0rem;
+        font-size: 2.4rem;
+        margin-left: -2.4rem;
+        padding-left: 2.4rem;
+        cursor: pointer;
+        color: $grey-color--one;
+        display: table-cell;
+    }
+
+    p {
+        padding-left: 2.4rem;
+        font-size: 1.6rem;
+    }
+    
+    label:before, label:after {
+        font-family: FontAwesome;
+        font-size: 50px;
+        /*absolutely positioned*/
+        position: absolute; 
+        top: 4px; left: -49px; right: 10px;
+    }
+
+    label:before {
+        content: '\f096'; /*checkbox unchecked box */
+    }
+
+    label:after {
+        content: '\f00c'; /*checkbox checked checkmark*/
+        max-width: 0;
+        overflow: hidden;
+        opacity: 0.5;
+        font-size: 27px;
+        top: 14px;
+        left: -42px;
+        color: $accent-color--one;
+    
+    -webkit-transition: all 0.50s;
+        -moz-transition: all 0.50s;
+        -o-transition: all 0.50s;
+        transition: all 0.50s;
+    }
+
+    /* Animating the Checkbox Icon */
+    input[type="checkbox"]:checked + label:after {
+        max-width: 25px;
+        opacity: 1;
+        margin-right: 90px;
+    }
+
+}
+
+ul li .bullet {
+    list-style: square;
+    margin-left: -2.4rem;
+    padding-left: 2.4rem;
+}

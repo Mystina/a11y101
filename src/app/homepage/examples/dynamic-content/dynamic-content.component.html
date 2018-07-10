@@ -1,0 +1,9 @@
+<h2>Dynamic content visually displayed should also be read by screen reaers.</h2>
+
+<p>The following message will be read by screen readers automatically when it's displayed on the page with triggering a CTA
+    item:</p>
+<pre><code class="language-markup">&lt;p *ngIf="isErrorState" role="alert"&gt;No questions available for your current selection.&lt;/p&gt;
+</code></pre>
+<p>The following message will
+    <b>NOT</b> be read by screen readers automatically when it's displayed ont the page with triggering a CTA item:</p>
+<pre><code class="language-markup">&lt;p *ngIf="isErrorState"&gt;No questions available for your current selection.&lt;/p&gt;</code></pre>

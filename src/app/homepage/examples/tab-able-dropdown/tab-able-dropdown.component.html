@@ -1,0 +1,50 @@
+<h2>Make dropdown menu tab-able</h2>
+<p>According to WCAG 2.0 A 2.1.1, 2.1.2, and 2.4.3, all web page content should be accessible by keyboard keys only. Especially
+    for elements that are CTA components on web pages, we need to make sure that tab-able functionality is enabled. For dropdown
+    menus, we need to make sure that
+    <code>tabindex = "0"</code> or
+    <code>tabindex</code> with positive values if the elements should be 
+    focusable in sequential keyboard navigation.
+</p>
+<p>For customized
+    <code>div</code> sections on web pages, we usually combine
+    <code>tabindex</code> and aria atributes
+    <code>aria-haspopup="true"</code>,
+    <code>aria-controls="[IDREF]"</code>, and
+    <code>aria-expanded="true"</code> to identify the focusable areas, 
+    and the role, property, state attributes 
+    to satisfy the above WCAG standards:</p>
+<p>A tab-able dropdown menu example exists in our 
+    TEST UI microsite Create Quiz Step One:</p>
+<pre class="language-markup">
+    &lt;!-- Provide a big div container --&gt;
+    &lt;div class="question-strand" [attr.strand-name]=strand.name&gt;
+    &lt;!-- Dropdown menu button controls menu expandation, 
+    menu items with correct aria attibutes - attr.aria-owns, attr.aria-controls, 
+    attr.aria-pressed, attr.aria-expanded, attr.aria-haspopup --&gt;
+        &lt;div class="flex-area"
+                id="strand.name"
+                role="button"
+                attr.aria-pressed=true
+                attr.aria-expanded=true
+                attr.aria-haspopup="true"
+                attr.aria-owns="strand.name_subtopics"
+                attr.aria-controls="strand.name_subtopics"
+                tabindex="0"&gt;
+        &lt;/div&gt;
+    &lt;!-- Accessible Menu with menu items with aria attributes --&gt;
+            &lt;div *ngIf="strand.isOpen" 
+            role="menu" 
+            id="strand.name_subtopics" 
+            attr.aria-labelledby="strand.name"&gt;
+                &lt;div role="menuitem" 
+                attr.aria-pressed=true tabindex="0"&gt;
+                    &lt;span *ngIf="strand.hasSelectedAll else selectAll"&gt;
+                    Deselect All&lt;/span&gt;
+                &lt;div&gt;
+                &lt;div role="menuitem" attr.aria-pressed=true tabindex="0"&gt; 
+                    &lt;div&gt;Check&lt;/div&gt;
+                &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+</pre>

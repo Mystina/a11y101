@@ -1,0 +1,27 @@
+<h2>Placeholder text color contrast should also satisfy the standards.</h2>
+<p>Higgs Grey Color One (Currently #222121) and white background has a 16.1:1 color contrast ratio:</p>
+<pre class="language-css">input[type=text] {{ '{' }} 
+	border: none; 
+	background: transparent; 
+	width: 100% !important; 
+	padding: 12px 0px; 
+	font-size: 16px;
+	margin: 8px 0; 
+	border-bottom: 2px solid #D2D8DA; 
+	color: $grey-color--one; 
+}</pre>
+<p>Color #839198 and white background has a 3.2:1 color contrast ratio, which is failing WCAG 2.0 AA standard for font size 16px:</p>
+
+<pre class="language-css">input[type=text] {{ '{' }} 
+	border: none; 
+	background: transparent; 
+	width: 100% !important; 
+	padding: 12px 0px; 
+	font-size: 16px;
+	margin: 8px 0; 
+	border-bottom: 2px solid #D2D8DA; 
+	color: #839198; 
+}</pre>
+
+
+

@@ -1,0 +1,56 @@
+@import '../../../../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+
+.sticky-navigation {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+
+    .sticky-navigation__nav {
+        background-color: $primary-color;
+        height: 4.8rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sticky-navigation__nav--link {
+        flex-wrap: wrap;
+        display: inline-block;
+        width: 100%;
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (min-width: 641px) {
+            #icon-designers, #icon-engineers, #icon-qa, #icon-editors, #icon-publishing, #icon-productowners {
+                span.icon {display:none};
+                span.text {display:inline-block};
+            }
+        }
+
+        @media (max-width: 640px) {
+            #icon-designers, #icon-engineers, #icon-qa, #icon-editors, #icon-publishing, #icon-productowners {
+                span.icon {display:inline-block};
+                span.text {display:none};
+            }
+        }
+    }   
+
+    .is-active {
+
+  .triangle {
+    width: 12px;
+    height: 12px;	
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 4px solid #E62899;
+    margin: 0 auto;
+    position: relative;
+     }
+}
+}

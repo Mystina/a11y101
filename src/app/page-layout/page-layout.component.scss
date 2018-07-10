@@ -1,0 +1,61 @@
+@import '../../../node_modules/@abot/atom-web-higgs/dist/global-styles/sass/_vars';
+$quiz-icons-sprite: url(../../assets/higgs-icon-quiz-sprite.svg);
+$row-dark-position-y: 8px;
+
+    .nav__links--parent {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $primary-color;
+    letter-spacing: 0.5px;
+
+    &:hover {
+      color: $accent-color--one;
+    }
+}
+
+ 
+
+.left-nav {
+    flex: 2 0 0;
+	height: 100%;
+	box-shadow: 0 0 0px 0 rgba(0,0,0,0.2);
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    padding: 10px; 
+
+    li {
+        display: block;
+        list-style: none;
+        font-size:14px;
+        line-height: 40px;
+    }
+    
+   .nav__links--children {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+    transition:all linear 0.5s;
+    }
+
+    .icon-down{
+    background-position: -65px #{$row-dark-position-y};
+}
+
+
+
+ .is-activated {
+      background-color: $shade-four;
+      border-left: 0.4rem solid $accent-color--one;
+      margin-left: -1.2rem;
+      margin-right: -1.2rem;
+      padding-left: 0.8rem;
+    }
+     a.nav-link--disabled {
+      opacity:.5;
+      text-decoration: none;
+      color: $grey-color--one;
+      font-weight: 400;
+    }
+    } 
